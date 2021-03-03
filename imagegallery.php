@@ -22,7 +22,7 @@
         </p>
       </div>
 
-      <a href="index.html">&lt; back to collaging</a>
+      <a id="backtocollaging" href="index.html">&lt; back to collaging</a>
     </header>
 
 

@@ -24,6 +24,10 @@ header a {
   font-size: 3vh;
 }
 
+header #backtocollaging {
+  text-align: right;
+}
+
 canvas {
   border: 1px solid black;
   /* position: absolute;
@@ -62,7 +66,9 @@ canvas {
 
 .image_assets {
   max-height: 200px;
+  max-width: 200px;
   padding: 2vw;
+  cursor: pointer;
 }
 
 .image_assets:hover {
@@ -70,8 +76,9 @@ canvas {
 }
 
 .background_assets {
-  width: 230px;
+  width: 33%;
   padding: 2vw;
+  cursor: pointer;
 }
 
 .background_assets:hover {
@@ -119,10 +126,14 @@ canvas {
   text-align: center;
   padding: 10px 0;
   width: 50%;
-  margin: auto;
+  margin: 1vh auto;
 }
 .bgbutton:hover {
   background-color: #D4C1EC;
+}
+
+.nobg {
+  cursor: pointer;
 }
 
 #uploadform {
@@ -149,6 +160,24 @@ button:hover{
 
 .buttonsAndToggles p {
   width: 80%;
+}
+
+#animate {
+  position: relative;
+}
+
+#animatewarning {
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  bottom: 101%;
+  left: -25%;
+  width: 150%;
+  display: none;
+}
+
+#animate:hover #animatewarning {
+  display: block;
 }
 
 a {
@@ -271,7 +300,6 @@ h1 {
 }
 
 .gallery {
-  padding: 0 2%;
   width: 100vw;
   overflow-x: hidden;
   display: flex;
@@ -280,12 +308,12 @@ h1 {
 }
 
 .gallery div {
-  width: 30%;
-  margin: 0 1%;
+  width: 33%;
+  padding: 3%;
 }
 
 .gallery div img {
-  width: 80%;
+  width: 100%;
 }
 
 .gallery div h3, .gallery div p {
