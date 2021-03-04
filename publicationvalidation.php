@@ -1,8 +1,5 @@
 <?php
 
-
-include ('config.php');
-
 $name = $_POST['name'];
 $comment = $_POST['comment'];
 $imgUrl = $_POST['imgURL'];
@@ -22,7 +19,7 @@ if($name != null && $comment != "Write a comment about your creative process her
     }
 
   }
-  $filedata = file_get_contents($path.'/data/imagegal.json');
+  $filedata = file_get_contents('data/imagegal.json');
   $data = json_decode($filedata, true);
   $data[] = [
     "filename" => $imgUrl,
@@ -30,7 +27,7 @@ if($name != null && $comment != "Write a comment about your creative process her
     "comment" => $comment
   ];
   $filedata = json_encode($data);
-  file_put_contents($path.'/data/imagegal.json', $filedata);
+  file_put_contents('data/imagegal.json', $filedata);
 
   print "<p>Your image was added successfully! Check in the <a href='imagegallery.php' class='savelink'>gallery</a></p>";
   setcookie('set_name', $name);
