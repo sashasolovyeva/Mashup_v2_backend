@@ -2,8 +2,6 @@
 <html>
   <head>
     <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport" />
-    <script src="../p5/p5.min.js"></script>
-    <script src="../p5/addons/p5.sound.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="stylesheet" href="https://use.typekit.net/lkh8jvi.css">
@@ -28,9 +26,7 @@
 
     <div class="gallery">
       <?php
-      include ('config.php');
-
-      $filedata = file_get_contents($path.'/data/imagegal.json');
+      $filedata = file_get_contents('data/imagegal.json');
       $data = json_decode($filedata, true);
 
       for ($i = count($data) - 1; $i >= 0; $i--){

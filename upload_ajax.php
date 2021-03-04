@@ -1,8 +1,4 @@
 <?php
-
-  // file path
-  include ('config.php');
-
   // the $_FILES superglobal contains a listing of all files that are being send in from the client
   $f = $_FILES['filename'];
 
@@ -37,7 +33,7 @@
       $filename = $t . '_' . $u . '.' . $filetype;
 
       // store the file for the user in their own folder
-      $filepath = $path."/backgrounds/".$filename;
+      $filepath = "backgrounds/".$filename;
       move_uploaded_file($f['tmp_name'], $filepath);
 
       print "$filepath";
