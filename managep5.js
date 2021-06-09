@@ -102,7 +102,7 @@ filter.onchange = function(){
 
 // LOADING BACKGROUNDS
 let bgPanel = document.getElementById('artwork_backgrounds')
-for(let i = 0; i < 6; i++){
+for(let i = 0; i < 14; i++){
   let temp = document.createElement('img')
   temp.src = 'assets/background' + i +'.jpg'
   temp.dataset.filename = 'assets/background' + i +'.jpg'
