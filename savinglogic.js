@@ -45,6 +45,7 @@ messagepanel = document.getElementById('msgpanel')
 submitbutton.addEventListener('click', function(event){
 
   event.preventDefault()
+  submitbutton.disabled = true;
 
   var usersname = document.getElementById('pseudonym').value
   var userscomment = document.getElementById('userscomment').value
@@ -60,7 +61,9 @@ submitbutton.addEventListener('click', function(event){
     },
     success: function(data, status){
       msgpanel.innerHTML = data;
-      if(data == "<p>Your image was added successfully! Check in the <a href='imagegallery.php' class='savelink'>gallery</a></p>"){
+      if(data != "<p>Your image was added successfully! Check in the <a href='imagegallery.php' class='savelink'>gallery</a></p>"){
+        submitbutton.disabled = false;
+      } else {
         submitbutton.style.display = 'none';
       }
     }

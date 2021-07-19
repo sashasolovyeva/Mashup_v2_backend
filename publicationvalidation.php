@@ -34,10 +34,10 @@ if($name != null && $comment != "Write a comment about your creative process her
   exit();
 
 } else if ($name == null) {
-  print "Invalid username!";
+  print "<p style='color:red;'>Invalid username!</p>";
   exit();
 } else if ($comment == "Write a comment about your creative process here!"){
-  print "Please write a comment!";
+  print "<p style='color:red;'>Please write a comment!</p>";
   exit();
 }
 
